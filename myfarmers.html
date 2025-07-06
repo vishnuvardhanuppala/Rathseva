@@ -1,0 +1,96 @@
+<!--Main file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Farmers</title>2223
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="My Farmers Logo" style="width: 100px; height: auto; display: inline-block; vertical-align: middle;"> <!-- Add your logo here -->
+        <h1 style="display: inline-block; vertical-align: middle; margin-left: 10px;"></h1>
+            <!-- Language Selection Dropdown -->
+        <div style="text-align: right; margin-top: -50px; margin-right: 20px;">
+            <select id="language-select" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                <option value="en">English</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+        </div>
+
+        <!--for search bar -->
+        <form action="search.html" method="get" style="margin-top: 10px; text-align: center;">
+            <input type="text" name="query" placeholder="Search..." style="padding: 5px; width: 200px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="submit" style="padding: 5px 10px; background-color: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer;"> search </button>
+        </form>
+        <h1>Welcome to My Farmers</h1>
+        <!--Used for link every file -->
+        <nav>
+            <ul>
+                <li><a href="store-crop.html">Store Your Crop</a></li>
+                <li><a href="about.html" aria-label="Learn more about us">About</a></li>
+                <li><a href="services.html" aria-label="Explore our services">Services</a></li>
+                <li><a href="contact.html" aria-label="Get in touch with us">Contact</a></li>
+                <li><a href="view-crops.php" aria-label="View stored crop data">View Crop Data</a></li>
+                <li><a href="founder.html" aria-label="Learn about our founder">Founder</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <script>
+            document.getElementById('language-select').addEventListener('change', function () {
+                const selectedLanguage = this.value;
+        
+                if (selectedLanguage === 'te') {
+                    // Redirect to Telugu version of the site
+                    window.location.href = 'myfarmers-te.html';
+                } else {
+                    // Redirect to English version of the site
+                    window.location.href = 'myfarmers.html';
+                }
+            });
+        </script>
+        <section id="choose-crop">
+            <h2>Choose Crop</h2>
+            <ul style="list-style: none; padding: 0; display: flex; gap: 20px; justify-content: center;">
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/paddy-dhan-common" target="_blank">
+                        <img src="paddy-icon.jpeg" alt="Paddy" style="width: 50px; height: 50px;">
+                        <p>Paddy</p>
+                    </a>
+                </li>
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/wheat" target="_blank">
+                        <img src="wheat-icon.jpeg" alt="Wheat" style="width: 50px; height: 50px;">
+                        <p>Wheat</p>
+                    </a>
+                </li>
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/sugar"target="_blank">
+                        <img src="sugarcane-icon.jpeg" alt="Sugarcane" style="width: 50px; height: 50px;">
+                        <p>Sugarcane</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Information about the farmers and their mission.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Details about the services provided by the farmers.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Contact information and form for inquiries.</p>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Farmers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

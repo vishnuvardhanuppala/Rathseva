@@ -1,0 +1,93 @@
+<!--Main file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>మా రైతులు</title>2223
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="మా రైతుల లోగో" style="width: 100px; height: auto; display: inline-block; vertical-align: middle;"> <!-- Add your logo here -->
+        <h1 style="display: inline-block; vertical-align: middle; margin-left: 10px;"></h1>
+            <!-- Language Selection Dropdown -->
+        <div style="text-align: right; margin-top: -50px; margin-right: 20px;">
+            <select id="language-select" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                <option value="en">ఆంగ్లం</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+        </div>
+
+        <!--for search bar -->
+        <form action="search.html" method="get" style="margin-top: 10px; text-align: center;">
+            <input type="text" name="query" placeholder="వెతకండి..." style="padding: 5px; width: 200px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="submit" style="padding: 5px 10px; background-color: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer;"> వెతకండి </button>
+        </form>
+        <h1>మా రైతులకు స్వాగతం</h1>
+        <!--Used for link every file -->
+        <nav>
+            <ul>
+                <li><a href="about-te.html" aria-label="మా గురించి తెలుసుకోండి">మా గురించి</a></li>
+                <li><a href="services-te.html" aria-label="మా సేవలను అన్వేషించండి">మా సేవలు</a></li>
+                <li><a href="contact-te.html" aria-label="మమ్మల్ని సంప్రదించండి">సంప్రదించండి</a></li>
+                <li><a href="founder-te.html" aria-label="మా వ్యవస్థాపకుడి గురించి తెలుసుకోండి">వ్యవస్థాపకుడు</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <script>
+            document.getElementById('language-select').addEventListener('change', function () {
+                const selectedLanguage = this.value;
+        
+                if (selectedLanguage === 'te') {
+                    // Redirect to Telugu version of the site
+                    window.location.href = 'myfarmers-te.html';
+                } else {
+                    // Redirect to English version of the site
+                    window.location.href = 'myfarmers.html';
+                }
+            });
+        </script>
+        <section id="choose-crop">
+            <h2>పంటను ఎంచుకోండి</h2>
+            <ul style="list-style: none; padding: 0; display: flex; gap: 20px; justify-content: center;">
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/paddy-dhan-common" target="_blank">
+                        <img src="paddy-icon.jpeg" alt="వరి" style="width: 50px; height: 50px;">
+                        <p>వరి</p>
+                    </a>
+                </li>
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/wheat" target="_blank">
+                        <img src="wheat-icon.jpeg" alt="గోధుమలు" style="width: 50px; height: 50px;">
+                        <p>గోధుమలు</p>
+                    </a>
+                </li>
+                <li style="text-align: center;">
+                    <a href="https://www.commodityonline.com/mandiprices/sugar"target="_blank">
+                        <img src="sugarcane-icon.jpeg" alt="చెరకు" style="width: 50px; height: 50px;">
+                        <p>చెరకు</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>మా గురించి</h2>
+            <p>రైతుల గురించి మరియు వారి లక్ష్యం గురించి సమాచారం.</p>
+        </section>
+        <section id="services">
+            <h2>మా సేవలు</h2>
+            <p>రైతులు అందించే సేవల వివరాలు.</p>
+        </section>
+        <section id="contact">
+            <h2>సంప్రదించండి</h2>
+            <p>ప్రశ్నలకు సంప్రదింపు సమాచారం మరియు ఫారమ్.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 మా రైతులు. హక్కులు అన్నీ పరిరక్షించబడ్డాయి.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Your Crop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Store Your Crop</h1>
+        <nav>
+            <ul>
+                <li><a href="myfarmers.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Enter Crop Details</h2>
+            <form action="save-crop.php" method="POST">
+                <label for="farmer-name">Farmer Name:</label>
+                <input type="text" id="farmer-name" name="farmer_name" required><br><br>
+
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" name="crop_name" required><br><br>
+
+                <label for="quantity">Quantity (in kg):</label>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+
+                <label for="warehouse">Choose Warehouse:</label>
+                <select id="warehouse" name="warehouse" required>
+                    <option value="Warehouse 1">Warehouse 1</option>
+                    <option value="Warehouse 2">Warehouse 2</option>
+                    <option value="Warehouse 3">Warehouse 3</option>
+                    <option value="Warehouse 4">Warehouse 4</option>
+                    <option value="Warehouse 5">Warehouse 5</option>
+                </select><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Farmers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

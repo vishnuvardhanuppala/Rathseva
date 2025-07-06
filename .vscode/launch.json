@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+
+    {
+      "name": "Launch PHP built-in server",
+      "type": "php",
+      "request": "launch",
+      "port": 8000,
+      "serverReadyAction": {
+        "pattern": "Listening on .*:(\\d+)",
+        "uriFormat": "http://localhost:%s/myfarmers.html",
+        "action": "openExternally"
+      }
+    }
+  ]
+}
